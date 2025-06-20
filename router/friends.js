@@ -73,9 +73,11 @@ router.delete("/:email", (req, res) => {
   // Update the code here
   const email = req.params.email;
   if(email){
-    this.delete friends[email]
-  }
+    delete friends[email];
     res.send(`Friend with the email ${email} has been deleted successfully`);
+  } else {
+    res.send(`Friend with the email ${email} not found`);
+  }
   //This line is to be replaced with actual return value
 });
 

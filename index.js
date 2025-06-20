@@ -111,4 +111,5 @@ const PORT =5000;
 
 app.use("/friends", routes);
 
-app.listen(PORT,()=>console.log("Server is running"));
+app.listen(PORT, () => console.log(`✅ Server is running at http://localhost:${PORT}`));
+
